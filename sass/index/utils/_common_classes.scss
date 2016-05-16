@@ -1,0 +1,16 @@
+.v-al-mid{
+  height: 100%;
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+.clearfix{
+  &:after{
+    display: block;
+    clear: both;
+  }
+}
+.db{display: block;}

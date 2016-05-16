@@ -1,0 +1,40 @@
+    /*
+    SCSS variables are information about icon's compiled state, stored under its original file name
+
+    .icon-home {
+    width: map-get($icon-home, 'width');
+    }
+
+    At the bottom of this section, we provide information about the spritesheet itself
+    */
+
+    $spritesheet: (
+    width: 268px,
+    height: 224px,
+    image: '../files/images/sprites.png',
+            cart-icon: (
+            name: 'cart-icon',
+            x: 0px,
+            y: 192px,
+            offset-x: 0px,
+            offset-y: -192px,
+            width: 32px,
+            height: 32px,
+            total-width: 268px,
+            total-height: 224px,
+            image: '../files/images/sprites.png'
+            ),
+            main-logotype: (
+            name: 'main-logotype',
+            x: 0px,
+            y: 0px,
+            offset-x: 0px,
+            offset-y: 0px,
+            width: 268px,
+            height: 190px,
+            total-width: 268px,
+            total-height: 224px,
+            image: '../files/images/sprites.png'
+            ),
+    );
+

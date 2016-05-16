@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    title
+      |Букет
+    link rel='stylesheet' href='./../css/main.css'
+    link rel='stylesheet' href='./../css/swiper.css'
+    script src='./../js/static_plugins/jquery-1.11.3.min.js'
+    script src='./../js/static_plugins/swiper.js'
+    script src='./../js/static_plugins/swiper.jquery.js'
+    script src='./../js/common.js'
+
+  body.clearfix
+    div.max-width-wrap
+      header.clearfix
+        div.logotype
+        div.right-bar.col-md-9.col-lg-9.pull-right.clearfix
+          div.contacts.pull-left.col-md-4.col-lg-4
+            span.db  г. Смоленск, Ул. Пржевальского д.2
+            span.db.phone-number + 7 (4812) 38-87-42
+          div.cart-block.pull-left.col-md-3.col-lg-3
+            a href='#'
+              span.glyphicon.glyphicon-map-marker
+              span Контакты на карте
+          div.pull-right.clearfix.col-md-3.col-lg-3
+            a.db.pull-right.cart-button href='#'
+              span.cart-icon
+              span Корзина
+          ul.main-menu
+            - for i in ['Букеты из живых цветов', 'Корзины из живых цветов', 'Композиции из живых цветов', 'Композиции из горшечных цветов', 'Вазы и кашпо', 'Композиции из искусственных', 'Игрушки и аксессуары', 'Предметы интерьера', 'Свадебная флористика', 'Траурная флористика', 'Школа флористики', 'К 8 марта'] do
+              li.menu-item
+                a href='#' #{i}
+
+      main
+        div.swiper-container
+          div.banners-block.swiper-wrapper
+            img.big-banner.swiper-slide src='../files/images/banners/main-big-banner.png'
+            img.big-banner.swiper-slide src='../files/images/banners/main-big-banner.png'
+            img.big-banner.swiper-slide src='../files/images/banners/main-big-banner.png'
+        ul.clearfix
+          li
+
+      footer
+        div.bottom-links
+          div.max-width-wrap
+
+
+        div.copyright
+          div.max-width-wrap

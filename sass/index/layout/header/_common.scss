@@ -1,0 +1,37 @@
+header{
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  .logotype{
+    @include sprite($spritesheet, 'main-logotype');
+  }
+  .cart-button{
+    background: #f2f2f2;
+    width: 70%;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    @include border-radius(5px);
+    .cart-icon{
+      @include sprite($spritesheet, 'cart-icon');
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  .main-menu{
+    clear: both;
+    padding-top: 20px;
+    .menu-item{
+      display: inline-block;
+      margin-right: 10px;
+      a{
+        display: inline-block;
+        padding: 5px;
+        &:hover{
+          background: #ffcc33;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
