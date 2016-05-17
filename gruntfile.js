@@ -21,7 +21,7 @@ module.exports = function(grunt){
             all:{
                 src: './files/images/sprites/**/**/**/*.png',
                 dest: './files/images/sprites.png',
-                destCss: './sass/generated/index/_sprites.scss',
+                destCss: './sass/index/generated/_sprites.scss',
                 cssTemplate: './grunt/templates/sprites.scss.handlebars',
                 imgPath: '../files/images/sprites.png',
                 padding: 2

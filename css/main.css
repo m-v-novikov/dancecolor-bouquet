@@ -7372,6 +7372,27 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'robotobold';
+  src: url("./../files/fonts/RobotoBold/roboto-bold-webfont.eot");
+  src: url("./../files/fonts/RobotoBold/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./../files/fonts/RobotoBold/roboto-bold-webfont.woff2") format("woff2"), url("./../files/fonts/RobotoBold/roboto-bold-webfont.woff") format("woff"), url("./../files/fonts/RobotoBold/roboto-bold-webfont.ttf") format("truetype"), url("./../files/fonts/RobotoBold/roboto-bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url("./../files/fonts/RobotoRegular/roboto-regular-webfont.eot");
+  src: url("./../files/fonts/RobotoRegular/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./../files/fonts/RobotoRegular/roboto-regular-webfont.woff2") format("woff2"), url("./../files/fonts/RobotoRegular/roboto-regular-webfont.woff") format("woff"), url("./../files/fonts/RobotoRegular/roboto-regular-webfont.ttf") format("truetype"), url("./../files/fonts/RobotoRegular/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotomedium';
+  src: url("./../files/fonts/RobotoMedium/roboto-medium-webfont.eot");
+  src: url("./../files/fonts/RobotoMedium/roboto-medium-webfont.eot?#iefix") format("embedded-opentype"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.woff2") format("woff2"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.woff") format("woff"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.ttf") format("truetype"), url("./../files/fonts/RobotoMedium/roboto-medium-webfont.svg#robotomedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 ul li {
   list-style: none;
 }
@@ -7393,6 +7414,7 @@ body {
   background-image: url("../files/images/bg/main-big-bg.png");
   background-position: 0 0;
   background-repeat: repeat;
+  font-family: 'robotoregular';
 }
 
 .max-width-wrap {
@@ -7411,6 +7433,24 @@ header .logotype {
   width: 268px;
   height: 190px;
 }
+header .contacts span {
+  color: #999999;
+  font-size: 13px;
+}
+header .contacts .phone-number {
+  font-size: 24px;
+  color: #BF252D;
+}
+header .map-button {
+  font-size: 13px;
+  color: #BF252D;
+}
+header .map-button span {
+  margin-right: 10px;
+}
+header .map-button .glyphicon {
+  color: #999999;
+}
 header .cart-button {
   background: #f2f2f2;
   width: 70%;
@@ -7424,7 +7464,7 @@ header .cart-button {
 }
 header .cart-button .cart-icon {
   display: inline-block;
-  background: url("../files/images/sprites.png") 0px -192px no-repeat;
+  background: url("../files/images/sprites.png") -270px -106px no-repeat;
   width: 32px;
   height: 32px;
   vertical-align: middle;
@@ -7445,6 +7485,45 @@ header .main-menu .menu-item a {
 header .main-menu .menu-item a:hover {
   background: #ffcc33;
   text-decoration: none;
+}
+
+main {
+  background: #ffffff;
+}
+main .banners-block .swiper-button {
+  position: absolute;
+  top: 50%;
+  margin-top: -52px;
+  z-index: 1;
+  cursor: pointer;
+}
+main .banners-block .swiper-button.swiper-prev {
+  display: inline-block;
+  background: url("../files/images/sprites.png") -270px 0px no-repeat;
+  width: 104px;
+  height: 104px;
+  left: 10px;
+}
+main .banners-block .swiper-button.swiper-next {
+  display: inline-block;
+  background: url("../files/images/sprites.png") 0px -192px no-repeat;
+  width: 104px;
+  height: 104px;
+  right: 10px;
+}
+main .left-side {
+  padding-left: 20px;
+}
+main .left-side h3 {
+  color: #BF252D;
+  font-size: 15px;
+  font-family: 'robotoregular';
+  font-weight: bold;
+}
+main .left-side .filter-links li {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+main{
+  background: #ffffff;
+  .banners-block{
+    .swiper-button{
+      position: absolute;
+      top: 50%;
+      margin-top: -52px;
+      z-index: 1;
+      cursor: pointer;
+      &.swiper-prev{
+        @include sprite($spritesheet, 'left-whight-big-arrow');
+        left: 10px;
+      }
+      &.swiper-next{
+        @include sprite($spritesheet, 'right-whight-big-arrow');
+        right: 10px;
+      }
+    }
+  }
+  .left-side{
+    padding-left: 20px;
+    h3{
+      color: #BF252D;
+      font-size: 15px;
+      font-family: 'robotoregular';
+      font-weight: bold;
+    }
+    .filter-links{
+      li{
+        font-size: 13px;
+        color: #333333;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

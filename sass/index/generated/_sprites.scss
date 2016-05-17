@@ -9,19 +9,31 @@
     */
 
     $spritesheet: (
-    width: 268px,
-    height: 224px,
+    width: 374px,
+    height: 296px,
     image: '../files/images/sprites.png',
             cart-icon: (
             name: 'cart-icon',
-            x: 0px,
-            y: 192px,
-            offset-x: 0px,
-            offset-y: -192px,
+            x: 270px,
+            y: 106px,
+            offset-x: -270px,
+            offset-y: -106px,
             width: 32px,
             height: 32px,
-            total-width: 268px,
-            total-height: 224px,
+            total-width: 374px,
+            total-height: 296px,
+            image: '../files/images/sprites.png'
+            ),
+            left-whight-big-arrow: (
+            name: 'left-whight-big-arrow',
+            x: 270px,
+            y: 0px,
+            offset-x: -270px,
+            offset-y: 0px,
+            width: 104px,
+            height: 104px,
+            total-width: 374px,
+            total-height: 296px,
             image: '../files/images/sprites.png'
             ),
             main-logotype: (
@@ -32,8 +44,20 @@
             offset-y: 0px,
             width: 268px,
             height: 190px,
-            total-width: 268px,
-            total-height: 224px,
+            total-width: 374px,
+            total-height: 296px,
+            image: '../files/images/sprites.png'
+            ),
+            right-whight-big-arrow: (
+            name: 'right-whight-big-arrow',
+            x: 0px,
+            y: 192px,
+            offset-x: 0px,
+            offset-y: -192px,
+            width: 104px,
+            height: 104px,
+            total-width: 374px,
+            total-height: 296px,
             image: '../files/images/sprites.png'
             ),
     );

@@ -5,6 +5,19 @@ header{
   .logotype{
     @include sprite($spritesheet, 'main-logotype');
   }
+  .contacts{
+    span{color: #999999; font-size: 13px;}
+    .phone-number{
+      font-size: 24px;
+      color: #BF252D;
+    }
+  }
+  .map-button{
+    font-size: 13px;
+    color: #BF252D;
+    span{margin-right: 10px;}
+    .glyphicon{color: #999999;}
+  }
   .cart-button{
     background: #f2f2f2;
     width: 70%;

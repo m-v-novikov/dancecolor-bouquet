@@ -18,6 +18,42 @@
 
 }
 
+@font-face {
+  font-family: 'robotobold';
+  src: url('./../files/fonts/RobotoBold/roboto-bold-webfont.eot');
+  src: url('./../files/fonts/RobotoBold/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./../files/fonts/RobotoBold/roboto-bold-webfont.woff2') format('woff2'),
+  url('./../files/fonts/RobotoBold/roboto-bold-webfont.woff') format('woff'),
+  url('./../files/fonts/RobotoBold/roboto-bold-webfont.ttf') format('truetype'),
+  url('./../files/fonts/RobotoBold/roboto-bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('./../files/fonts/RobotoRegular/roboto-regular-webfont.eot');
+  src: url('./../files/fonts/RobotoRegular/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./../files/fonts/RobotoRegular/roboto-regular-webfont.woff2') format('woff2'),
+  url('./../files/fonts/RobotoRegular/roboto-regular-webfont.woff') format('woff'),
+  url('./../files/fonts/RobotoRegular/roboto-regular-webfont.ttf') format('truetype'),
+  url('./../files/fonts/RobotoRegular/roboto-regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url('./../files/fonts/RobotoMedium/roboto-medium-webfont.eot');
+  src: url('./../files/fonts/RobotoMedium/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./../files/fonts/RobotoMedium/roboto-medium-webfont.woff2') format('woff2'),
+  url('./../files/fonts/RobotoMedium/roboto-medium-webfont.woff') format('woff'),
+  url('./../files/fonts/RobotoMedium/roboto-medium-webfont.ttf') format('truetype'),
+  url('./../files/fonts/RobotoMedium/roboto-medium-webfont.svg#robotomedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 ul li{list-style: none;}
 *{margin: 0; padding: 0;}
 a{
@@ -32,6 +68,7 @@ body{
   background-image: url("../files/images/bg/main-big-bg.png");
   background-position: 0 0;
   background-repeat: repeat;
+  font-family: 'robotoregular';
 }
 .max-width-wrap{
   max-width: 1170px;

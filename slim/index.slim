@@ -19,8 +19,8 @@ html
           div.contacts.pull-left.col-md-4.col-lg-4
             span.db  г. Смоленск, Ул. Пржевальского д.2
             span.db.phone-number + 7 (4812) 38-87-42
-          div.cart-block.pull-left.col-md-3.col-lg-3
-            a href='#'
+          div.pull-left.col-md-3.col-lg-3
+            a.map-button href='#'
               span.glyphicon.glyphicon-map-marker
               span Контакты на карте
           div.pull-right.clearfix.col-md-3.col-lg-3
@@ -33,11 +33,45 @@ html
                 a href='#' #{i}
 
       main
-        div.swiper-container
-          div.banners-block.swiper-wrapper
+        div.banners-block.swiper-container
+          div.swiper-wrapper
             img.big-banner.swiper-slide src='../files/images/banners/main-big-banner.png'
             img.big-banner.swiper-slide src='../files/images/banners/main-big-banner.png'
             img.big-banner.swiper-slide src='../files/images/banners/main-big-banner.png'
+          div.swiper-prev.swiper-button
+          div.swiper-next.swiper-button
+
+        div.left-side
+          h3 Каталог
+          ul.filter-links
+            - for i in ['Букеты из живых цветов', 'Корзины из живых цветов', 'Композиции из живых цветов', 'Композиции из горшечных цветов', 'Вазы и кашпо', 'Композиции из искусственных', 'Игрушки и аксессуары', 'Предметы интерьера', 'Свадебная флористика', 'Траурная флористика'] do
+              li.menu-item
+                a href='#' #{i}
+
+          h3 Форма
+          ul.filter-links
+            - for i in ['Сердце из цветов', 'Пышные букеты', 'Корзины цветов', 'Оригинальные букеты', 'Вертикальные композиции', 'Букет в вазе'] do
+              li.menu-item
+                a href='#' #{i}
+
+          h3 Кому
+          ul.filter-links
+            - for i in ['Для женщины', 'Для мужчины', 'Для ребенка'] do
+              li.menu-item
+                a href='#' #{i}
+
+          h3 Повод
+          ul.filter-links
+            - for i in ['Благодарю', 'Извиняюсь ', 'Люблю', 'С Днем Рождения', 'Бизнес'] do
+              li.menu-item
+                a href='#' #{i}
+
+          h3 Свадебная флористика
+          ul.filter-links
+            - for i in ['Букет невесты', 'Бутоньерка ', 'Свадебные аксессуары', 'Оформление машин', 'Настольные композиции', 'Оформление зала'] do
+              li.menu-item
+                a href='#' #{i}
+
         ul.clearfix
           li
 
