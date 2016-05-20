@@ -33,4 +33,47 @@ main{
       }
     }
   }
+  .product-list{
+    font-family: 'robotoregular';
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    .product-item{
+      @include make-xs-column(6);
+      @include make-sm-column(4);
+      @include make-md-column(2.4);
+      @include make-lg-column(2.4);
+      padding: 0.5%;
+      &_price{
+        font-family: 'robotobold';
+        font-weight: 700;
+        font-size: 14px;
+        color: #BF252D;
+        line-height: 16px;
+        width: 40%;
+        padding: 10px 0;
+        text-align: center;
+        &:after{
+          content: 'rub';
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }
+      a{
+        img{
+          margin-bottom: 10px;
+        }
+        p{
+          margin-top: 10px;
+          span{
+            vertical-align: middle;
+          }
+          .cart-button{
+            padding: 10px 5px;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
 }

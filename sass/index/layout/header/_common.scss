@@ -19,12 +19,7 @@ header{
     .glyphicon{color: #999999;}
   }
   .cart-button{
-    background: #f2f2f2;
     width: 70%;
-    padding: 10px;
-    vertical-align: middle;
-    text-align: center;
-    @include border-radius(5px);
     .cart-icon{
       @include sprite($spritesheet, 'cart-icon');
       vertical-align: middle;

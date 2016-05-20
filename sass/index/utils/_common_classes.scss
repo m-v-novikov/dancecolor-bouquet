@@ -14,3 +14,24 @@
   }
 }
 .db{display: block;}
+
+.cart-button {
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  @include border-radius(5px);
+}
+
+.social{
+  display: inline-block;
+  vertical-align: middle;
+  &.vk{
+    @include sprite($spritesheet, 'vk-icon');
+  }
+  &.instagram{
+    @include sprite($spritesheet, 'instagram-icon');
+  }
+}

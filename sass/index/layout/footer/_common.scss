@@ -1,3 +1,40 @@
 footer{
-
+  background: #ffffff;
+  padding: 20px;
+  .seo-block{
+    font-family: 'robotoregular';
+    padding: 0 0 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+    h4{
+      font-family: 'PT Sans Regular', 'PT Sans';
+      font-size: 24px;
+    }
+  }
+  .bottom-links{
+    li{
+      display: inline-block;
+      padding: 15px 0;
+      margin-right: 15px;
+    }
+  }
+  .social{
+    margin-left: 15px;
+  }
+  span{
+    vertical-align: middle;
+  }
+  .we-are{
+    height: 32px;
+    a{
+      color: #BF252D;
+      font-family: 'PT Sans Regular', 'PT Sans';
+      font-size: 12px;
+      padding-left: 5px;
+    }
+  }
 }

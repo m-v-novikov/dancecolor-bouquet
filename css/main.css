@@ -7365,6 +7365,36 @@ button.close {
   display: block;
 }
 
+.cart-button {
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.social {
+  display: inline-block;
+  vertical-align: middle;
+}
+.social.vk {
+  display: inline-block;
+  background: url("../files/images/sprites.png") -338px -106px no-repeat;
+  width: 32px;
+  height: 32px;
+}
+.social.instagram {
+  display: inline-block;
+  background: url("../files/images/sprites.png") -304px -106px no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("./../files/fonts/bootstrap/glyphicons-halflings-regular.eot");
@@ -7393,8 +7423,9 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
-ul li {
+ul, li {
   list-style: none;
+  margin: 0;
 }
 
 * {
@@ -7452,15 +7483,7 @@ header .map-button .glyphicon {
   color: #999999;
 }
 header .cart-button {
-  background: #f2f2f2;
   width: 70%;
-  padding: 10px;
-  vertical-align: middle;
-  text-align: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
 }
 header .cart-button .cart-icon {
   display: inline-block;
@@ -7524,6 +7547,118 @@ main .left-side .filter-links li {
   font-size: 13px;
   color: #333333;
   margin-bottom: 10px;
+}
+main .product-list {
+  font-family: 'robotoregular';
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+}
+main .product-list .product-item {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0.5%;
+}
+@media (min-width: 768px) {
+  main .product-list .product-item {
+    float: left;
+    width: 33.33333%;
+  }
+}
+@media (min-width: 992px) {
+  main .product-list .product-item {
+    float: left;
+    width: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  main .product-list .product-item {
+    float: left;
+    width: 20%;
+  }
+}
+main .product-list .product-item_price {
+  font-family: 'robotobold';
+  font-weight: 700;
+  font-size: 14px;
+  color: #BF252D;
+  line-height: 16px;
+  width: 40%;
+  padding: 10px 0;
+  text-align: center;
+}
+main .product-list .product-item_price:after {
+  content: 'rub';
+  display: inline-block;
+  margin-left: 10px;
+}
+main .product-list .product-item a img {
+  margin-bottom: 10px;
+}
+main .product-list .product-item a p {
+  margin-top: 10px;
+}
+main .product-list .product-item a p span {
+  vertical-align: middle;
+}
+main .product-list .product-item a p .cart-button {
+  padding: 10px 5px;
+  width: 50%;
+}
+
+footer {
+  background: #ffffff;
+  padding: 20px;
+}
+footer .seo-block {
+  font-family: 'robotoregular';
+  padding: 0 0 20px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  text-align: left;
+  border-bottom: 1px solid #f2f2f2;
+}
+footer .seo-block h4 {
+  font-family: 'PT Sans Regular', 'PT Sans';
+  font-size: 24px;
+}
+footer .bottom-links li {
+  display: inline-block;
+  padding: 15px 0;
+  margin-right: 15px;
+}
+footer .social {
+  margin-left: 15px;
+}
+footer span {
+  vertical-align: middle;
+}
+footer .we-are {
+  height: 32px;
+}
+footer .we-are a {
+  color: #BF252D;
+  font-family: 'PT Sans Regular', 'PT Sans';
+  font-size: 12px;
+  padding-left: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
