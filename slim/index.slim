@@ -80,7 +80,7 @@ html
                 p.product-item_title
                   | Весенний Дуэт живая композиция
                 form.clearfix
-                  span.product-item_price.pull-left
+                  span.price.pull-left
                     | 1225
                   button.cart-button.add-to-card.pull-right
                     | В корзину
@@ -88,6 +88,63 @@ html
 
         ul.clearfix
           li
+
+
+        div.fragments
+          h3.text-uppercase breadcrumb
+          ul.breadcrumb
+            - for i in ['Главная', 'Корзины из живых цветов']
+              li
+                a href='#' #{i}
+          h3.text-uppercase product-card
+          div.product-card.clearfix
+            div.main-image
+              img.img-responsive src='./../files/images/temporary/u400.png'
+            ul.other-image
+              - for i in ['u400', 'u404', 'u406', 'u402']
+                li
+                  a.db href='#'
+                    img.img-responsive src='./../files/images/temporary/#{i}.png'
+            div.description
+              h1
+                | Букет «Сердце Лилу»
+              form.buying-block
+                p
+                  span.price
+                    | 2 500
+                  span.caret.left
+                  label.quantity 1
+                  span.caret.right
+                  input.hidden value='1'
+                button.red-button Заказать
+              p.texts
+                | Сердце каждой женщины испытывает трепет при виде роз. А если они собраны как букет в виде сердца, то эмоции усиливаются! На
+                  первый взгляд букет «Сердце Лилу» – простая композиция цветов, но, стоит присмотреться чуть пристальнее, становится понятно,
+                  что каждые цветок таит свой секрет: можно долго любоваться нежными бутонами розы Нью Лилак, которые напоминают о беззаботных
+                  летних деньках или восхищаться гордыми соцветиями кустовой розы Силк Колороса. Невероятно, как эти цветы отличаются друг от
+                  друга! Они будто намекают, что сердце девушки скрывает много тайн и для каждого открывается по-разному.
+              p.composition
+                span.bold Состав
+                - for i in ['Роза Нью Лилак', 'роза кустовая Силк Колороса']
+                  span #{i}
+
+          h3.text-uppercase cart-block
+          div.cart-block
+            h1 Корзина
+            - for i in ['Весенний Дуэт живая композиция', 'Детское желание корзина гвоздик и роз', 'Весенний Дуэт живая композиция']
+              div.cart-item
+                div.wrap.claerfix
+                  img.img-responsive.dib src='./../files/images/temporary/u404.png'
+                  div.desc
+                    p #{i}
+                    p.price 2500
+                  form
+                    span.caret.left
+                    label.quantity 1
+                    span.caret.right
+                    input.hidden value='1'
+                    button.glyphicon.glyphicon-trash
+
 
       footer
         div.seo-block

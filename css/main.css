@@ -7365,6 +7365,10 @@ button.close {
   display: block;
 }
 
+.dib {
+  display: inline-block;
+}
+
 .cart-button {
   background: #f2f2f2;
   border: none;
@@ -7393,6 +7397,64 @@ button.close {
   background: url("../files/images/sprites.png") -304px -106px no-repeat;
   width: 32px;
   height: 32px;
+}
+
+.price {
+  font-family: 'robotobold';
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 14px;
+  color: #BF252D;
+  line-height: 16px;
+  width: 40%;
+  padding: 10px 0;
+  text-align: center;
+}
+.price:after {
+  content: 'rub';
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.red-button {
+  background: #BF252D;
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+}
+
+.caret {
+  margin: 0 10px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.caret.left {
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-right: 5px solid #3498db;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.caret.right {
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-left: 5px solid #3498db;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+
+.quantity {
+  vertical-align: middle;
+  background: #f2f2f2;
+  border: none;
+  width: 30px;
+  text-align: center;
+  margin: 0;
 }
 
 @font-face {
@@ -7426,6 +7488,11 @@ button.close {
 ul, li {
   list-style: none;
   margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
 }
 
 * {
@@ -7593,21 +7660,6 @@ main .product-list .product-item {
     width: 20%;
   }
 }
-main .product-list .product-item_price {
-  font-family: 'robotobold';
-  font-weight: 700;
-  font-size: 14px;
-  color: #BF252D;
-  line-height: 16px;
-  width: 40%;
-  padding: 10px 0;
-  text-align: center;
-}
-main .product-list .product-item_price:after {
-  content: 'rub';
-  display: inline-block;
-  margin-left: 10px;
-}
 main .product-list .product-item a img {
   margin-bottom: 10px;
 }
@@ -7620,6 +7672,201 @@ main .product-list .product-item a p span {
 main .product-list .product-item a p .cart-button {
   padding: 10px 5px;
   width: 50%;
+}
+main .fragments {
+  padding: 20px;
+}
+main .fragments .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-family: 'robotoregular';
+}
+main .fragments .breadcrumb a {
+  color: #BCBCBC;
+}
+main .fragments .product-card .main-image {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  main .fragments .product-card .main-image {
+    float: left;
+    width: 41.66667%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .product-card .main-image {
+    float: left;
+    width: 41.66667%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .product-card .main-image {
+    float: left;
+    width: 41.66667%;
+  }
+}
+main .fragments .product-card .main-image img {
+  width: 100%;
+}
+main .fragments .product-card .other-image {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  main .fragments .product-card .other-image {
+    float: left;
+    width: 8.33333%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .product-card .other-image {
+    float: left;
+    width: 8.33333%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .product-card .other-image {
+    float: left;
+    width: 8.33333%;
+  }
+}
+main .fragments .product-card .other-image li a {
+  margin-bottom: 10px;
+}
+main .fragments .product-card .other-image li a:hover {
+  border: 5px solid #ffcc33;
+}
+main .fragments .product-card .description {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  main .fragments .product-card .description {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .product-card .description {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .product-card .description {
+    float: left;
+    width: 50%;
+  }
+}
+main .fragments .product-card .description p {
+  margin: 30px 0;
+}
+main .fragments .product-card .description .buying-block .price {
+  font-size: 18px;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+main .fragments .product-card .description .composition span {
+  margin-right: 7px;
+}
+main .fragments .product-card .description .composition span:after {
+  content: ',';
+  display: inline-block;
+}
+main .fragments .product-card .description .composition span:first-child {
+  font-weight: bold;
+}
+main .fragments .product-card .description .composition span:first-child:after {
+  content: ':';
+  display: inline-block;
+}
+main .fragments .cart-block {
+  margin-right: -2%;
+}
+main .fragments .cart-block .cart-item {
+  width: 48%;
+  display: inline-block;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border: 2px solid #BCBCBC;
+}
+main .fragments .cart-block .cart-item .wrap {
+  padding: 22px;
+}
+main .fragments .cart-block .cart-item .wrap .desc {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5%;
+  width: 30%;
+  font-size: 12px;
+}
+main .fragments .cart-block .cart-item .wrap .desc .price {
+  margin-bottom: 0;
+  text-align: left;
+}
+main .fragments .cart-block .cart-item .wrap form {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+  text-align: center;
+}
+main .fragments .cart-block .cart-item .wrap form * {
+  vertical-align: middle;
+}
+main .fragments .cart-block .cart-item .wrap form .glyphicon {
+  margin-left: 20%;
 }
 
 footer {

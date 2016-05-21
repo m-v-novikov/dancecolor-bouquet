@@ -33,6 +33,7 @@ main{
       }
     }
   }
+
   .product-list{
     font-family: 'robotoregular';
     font-style: normal;
@@ -44,21 +45,6 @@ main{
       @include make-md-column(2.4);
       @include make-lg-column(2.4);
       padding: 0.5%;
-      &_price{
-        font-family: 'robotobold';
-        font-weight: 700;
-        font-size: 14px;
-        color: #BF252D;
-        line-height: 16px;
-        width: 40%;
-        padding: 10px 0;
-        text-align: center;
-        &:after{
-          content: 'rub';
-          display: inline-block;
-          margin-left: 10px;
-        }
-      }
       a{
         img{
           margin-bottom: 10px;
@@ -73,6 +59,112 @@ main{
             width: 50%;
           }
         }
+      }
+    }
+  }
+
+  .fragments{
+    padding: 20px;
+
+    .breadcrumb{
+      background-color: transparent;
+      padding: 0;
+      font-size: 12px;
+
+      font-style: normal;
+      font-family: 'robotoregular';
+      a{color: #BCBCBC;}
+    }
+
+    .product-card{
+      .main-image{
+        @include make-xs-column(12);
+        @include make-sm-column(5);
+        @include make-md-column(5);
+        @include make-lg-column(5);
+        padding: 0;
+        img{width: 100%;}
+      }
+      .other-image{
+        @include make-xs-column(12);
+        @include make-sm-column(1);
+        @include make-md-column(1);
+        @include make-lg-column(1);
+        li{
+          a{
+            margin-bottom: 10px;
+            &:hover{
+              border: 5px solid #ffcc33;
+            }
+          }
+        }
+      }
+      .description{
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        p{margin: 30px 0;}
+        .buying-block{
+          .price{
+            font-size: 18px;
+            margin-right: 30px;
+            vertical-align: middle;
+          }
+
+        }
+        .composition{
+          span{
+            margin-right: 7px;
+            &:after{
+              content: ',';
+              display: inline-block;
+            }
+            &:first-child{
+              font-weight: bold;
+              &:after{
+                content: ':';
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .cart-block{
+      margin-right: -2%;
+      .cart-item{
+        width: 48%;
+        display: inline-block;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        border: 2px solid #BCBCBC;
+        .wrap{
+          padding: 22px;
+          .desc{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5%;
+            width: 30%;
+            font-size: 12px;
+            .price{
+              margin-bottom: 0;
+              text-align: left;
+            }
+          }
+          form{
+            display: inline-block;
+            vertical-align: middle;
+            width: 40%;
+            text-align: center;
+            *{vertical-align: middle;}
+            .glyphicon{
+              margin-left: 20%;
+            }
+          }
+        }
+
       }
     }
   }

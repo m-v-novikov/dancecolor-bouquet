@@ -14,6 +14,7 @@
   }
 }
 .db{display: block;}
+.dib{display: inline-block;}
 
 .cart-button {
   background: #f2f2f2;
@@ -34,4 +35,58 @@
   &.instagram{
     @include sprite($spritesheet, 'instagram-icon');
   }
+}
+.price{
+  font-family: 'robotobold';
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 14px;
+  color: #BF252D;
+  line-height: 16px;
+  width: 40%;
+  padding: 10px 0;
+  text-align: center;
+  &:after{
+    content: 'rub';
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.red-button{
+  background: #BF252D;
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+}
+
+.caret{
+  margin: 0 10px;
+  cursor: pointer;
+  vertical-align: middle;
+  &.left{
+    @include triangle(
+    $direction : left,
+    $position  : top 100% left 0.1em,
+    $color     : #3498db,
+    $size      : 5px
+    );
+  }
+  &.right{
+    @include triangle(
+    $direction : right,
+    $position  : top 100% left 0.1em,
+    $color     : #3498db,
+    $size      : 5px
+    );
+  }
+}
+.quantity{
+  vertical-align: middle;
+  background: #f2f2f2;
+  border: none;
+  width: 30px;
+  text-align: center;
+  margin: 0;
 }
