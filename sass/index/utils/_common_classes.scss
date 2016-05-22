@@ -16,6 +16,8 @@
 .db{display: block;}
 .dib{display: inline-block;}
 
+.mt-20{margin-top: 20px;}
+
 .cart-button {
   background: #f2f2f2;
   border: none;
@@ -90,3 +92,94 @@
   text-align: center;
   margin: 0;
 }
+
+.default-grey-form{
+  background: #f2f2f2;
+  padding: 20px;
+  font-size: 12px;
+  .required{
+    label:after{
+      content: '*';
+      color: #BF252D;
+      margin-left: 5px;
+    }
+  }
+  div{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    input, label, textarea{display: block; border: none; outline: none;}
+    input{
+      height: 28px;
+      width: 160px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.rating:not(.static) {
+  & > li {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    &:before{
+      content: '';
+      @include sprite($spritesheet, 'grey-rating-star');
+    }
+  }
+  & > li:hover:after,
+  & > li:hover ~ li:after,
+  & > li.active:after,
+  & > li.active ~ li:after {
+    content: "";
+    @include sprite($spritesheet, 'red-rating-star');
+    position: absolute;
+    left: 0; top: 0;
+  }
+}
+.rating{
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  &.static > li {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    &:before{
+      content: '';
+      @include sprite($spritesheet, 'grey-rating-star');
+    }
+  }
+  &.static > li.active:after,
+  &.static > li.active ~ li:after {
+    content: "";
+    @include sprite($spritesheet, 'red-rating-star');
+    position: absolute;
+    left: 0; top: 0;
+  }
+}
+
+.paginator{
+  span{
+    font-size: 12px;
+    color: #999999;
+    margin-right: 5px;
+  }
+  ul{
+    display: inline-block;
+    li{
+      display: inline-block;
+      font-size: 12px;
+      line-height: 30px;
+      width: 30px; height: 30px;
+      margin-right: 5px;
+      background: #f2f2f2;
+      text-align: center;
+      cursor: pointer;
+      &:hover, &.active{
+        background: #BF252D;
+        color: #ffffff;
+      }
+    }
+  }
+}
+

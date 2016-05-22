@@ -7369,6 +7369,10 @@ button.close {
   display: inline-block;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
 .cart-button {
   background: #f2f2f2;
   border: none;
@@ -7388,13 +7392,13 @@ button.close {
 }
 .social.vk {
   display: inline-block;
-  background: url("../files/images/sprites.png") -338px -106px no-repeat;
+  background: url("../files/images/sprites.png") -280px -192px no-repeat;
   width: 32px;
   height: 32px;
 }
 .social.instagram {
   display: inline-block;
-  background: url("../files/images/sprites.png") -304px -106px no-repeat;
+  background: url("../files/images/sprites.png") -246px -192px no-repeat;
   width: 32px;
   height: 32px;
 }
@@ -7457,6 +7461,106 @@ button.close {
   margin: 0;
 }
 
+.default-grey-form {
+  background: #f2f2f2;
+  padding: 20px;
+  font-size: 12px;
+}
+.default-grey-form .required label:after {
+  content: '*';
+  color: #BF252D;
+  margin-left: 5px;
+}
+.default-grey-form div {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+}
+.default-grey-form div input, .default-grey-form div label, .default-grey-form div textarea {
+  display: block;
+  border: none;
+  outline: none;
+}
+.default-grey-form div input {
+  height: 28px;
+  width: 160px;
+  padding-left: 10px;
+}
+
+.rating:not(.static) > li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.rating:not(.static) > li:before {
+  content: '';
+  display: inline-block;
+  background: url("../files/images/sprites.png") -270px -162px no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.rating:not(.static) > li:hover:after, .rating:not(.static) > li:hover ~ li:after, .rating:not(.static) > li.active:after, .rating:not(.static) > li.active ~ li:after {
+  content: "";
+  display: inline-block;
+  background: url("../files/images/sprites.png") -296px -162px no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating.static > li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.rating.static > li:before {
+  content: '';
+  display: inline-block;
+  background: url("../files/images/sprites.png") -270px -162px no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.rating.static > li.active:after, .rating.static > li.active ~ li:after {
+  content: "";
+  display: inline-block;
+  background: url("../files/images/sprites.png") -296px -162px no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.paginator span {
+  font-size: 12px;
+  color: #999999;
+  margin-right: 5px;
+}
+.paginator ul {
+  display: inline-block;
+}
+.paginator ul li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  background: #f2f2f2;
+  text-align: center;
+  cursor: pointer;
+}
+.paginator ul li:hover, .paginator ul li.active {
+  background: #BF252D;
+  color: #ffffff;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("./../files/fonts/bootstrap/glyphicons-halflings-regular.eot");
@@ -7515,6 +7619,10 @@ body {
   font-family: 'robotoregular';
 }
 
+h1 {
+  font-size: 20px;
+}
+
 .max-width-wrap {
   max-width: 1170px;
   margin: 0 auto;
@@ -7554,7 +7662,7 @@ header .cart-button {
 }
 header .cart-button .cart-icon {
   display: inline-block;
-  background: url("../files/images/sprites.png") -270px -106px no-repeat;
+  background: url("../files/images/sprites.png") -212px -192px no-repeat;
   width: 32px;
   height: 32px;
   vertical-align: middle;
@@ -7587,16 +7695,19 @@ main .banners-block .swiper-button {
   z-index: 1;
   cursor: pointer;
 }
+main .banners-block .swiper-button.swiper-button-disabled {
+  opacity: 0.5;
+}
 main .banners-block .swiper-button.swiper-prev {
   display: inline-block;
-  background: url("../files/images/sprites.png") -270px 0px no-repeat;
+  background: url("../files/images/sprites.png") 0px -192px no-repeat;
   width: 104px;
   height: 104px;
   left: 10px;
 }
 main .banners-block .swiper-button.swiper-next {
   display: inline-block;
-  background: url("../files/images/sprites.png") 0px -192px no-repeat;
+  background: url("../files/images/sprites.png") -106px -192px no-repeat;
   width: 104px;
   height: 104px;
   right: 10px;
@@ -7835,12 +7946,29 @@ main .fragments .product-card .description .composition span:first-child:after {
 main .fragments .cart-block {
   margin-right: -2%;
 }
+main .fragments .cart-block h1 {
+  font-size: 24px;
+}
+main .fragments .cart-block .total {
+  font-size: 12px;
+}
+main .fragments .cart-block .total span {
+  vertical-align: middle;
+}
+main .fragments .cart-block .total-sum {
+  font-size: 20px;
+  margin-left: 10px;
+}
+main .fragments .cart-block .total-sum:after {
+  content: 'rub.';
+  margin-left: 10px;
+}
 main .fragments .cart-block .cart-item {
   width: 48%;
   display: inline-block;
   margin-right: 2%;
   margin-bottom: 2%;
-  border: 2px solid #BCBCBC;
+  border: 1px solid #BCBCBC;
 }
 main .fragments .cart-block .cart-item .wrap {
   padding: 22px;
@@ -7867,6 +7995,223 @@ main .fragments .cart-block .cart-item .wrap form * {
 }
 main .fragments .cart-block .cart-item .wrap form .glyphicon {
   margin-left: 20%;
+}
+main .fragments .cart-block .personal-data {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 40px;
+}
+@media (min-width: 768px) {
+  main .fragments .cart-block .personal-data {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .cart-block .personal-data {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .cart-block .personal-data {
+    float: left;
+    width: 75%;
+  }
+}
+main .fragments .cart-block .personal-data button {
+  vertical-align: middle;
+}
+main .fragments .cart-block .after-buying-helper {
+  font-size: 12px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3%;
+}
+@media (min-width: 768px) {
+  main .fragments .cart-block .after-buying-helper {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .cart-block .after-buying-helper {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .cart-block .after-buying-helper {
+    float: left;
+    width: 25%;
+  }
+}
+main .fragments .comment-block {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  main .fragments .comment-block {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .comment-block {
+    float: left;
+    width: 83.33333%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .comment-block {
+    float: left;
+    width: 83.33333%;
+  }
+}
+main .fragments .comment-block .comments-form {
+  position: relative;
+}
+@media (min-width: 768px) {
+  main .fragments .comment-block .comments-form:before {
+    content: '';
+    display: inline-block;
+    background: url("../files/images/sprites.png") -270px 0px no-repeat;
+    width: 199px;
+    height: 160px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+  }
+}
+main .fragments .comment-block .comments-form .your-message {
+  margin-top: 30px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  main .fragments .comment-block .comments-form .your-message {
+    float: left;
+    width: 66.66667%;
+  }
+}
+@media (min-width: 992px) {
+  main .fragments .comment-block .comments-form .your-message {
+    float: left;
+    width: 66.66667%;
+  }
+}
+@media (min-width: 1200px) {
+  main .fragments .comment-block .comments-form .your-message {
+    float: left;
+    width: 66.66667%;
+  }
+}
+main .fragments .comment-block .comments-form .your-message textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  padding: 10px;
+}
+main .fragments .comment-block .comments-form .red-button {
+  clear: both;
+}
+@media (min-width: 768px) {
+  main .fragments .comment-block .comments-form .red-button {
+    position: relative;
+    z-index: 2;
+    margin-top: -50px;
+    margin-right: 8%;
+  }
+}
+main .fragments .comment-block .user-comments .comment {
+  font-size: 12px;
+}
+main .fragments .comment-block .user-comments .comment div span {
+  vertical-align: middle;
+}
+main .fragments .comment-block .user-comments .comment div .rating {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 40px;
+}
+main .fragments .comment-block .user-comments .comment div .date {
+  color: #999999;
+}
+main .fragments .comment-block .user-comments .comment div .user-name {
+  font-family: 'robotobold';
+}
+main .fragments .comment-block .user-comments .comment .user-text {
+  margin-top: 10px;
+  background: #f2f2f2;
+  padding: 10px;
 }
 
 footer {

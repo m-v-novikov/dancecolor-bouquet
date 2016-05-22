@@ -11,4 +11,6 @@ $(document).ready(function(){
         e.preventDefault();
         console.log(e.currentTarget);
     })
+
+    $('.phoneField input').mask("+7 (999) 999-99-99");
 });

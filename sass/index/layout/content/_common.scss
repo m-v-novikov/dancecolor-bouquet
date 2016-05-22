@@ -7,6 +7,7 @@ main{
       margin-top: -52px;
       z-index: 1;
       cursor: pointer;
+      &.swiper-button-disabled{opacity: 0.5;}
       &.swiper-prev{
         @include sprite($spritesheet, 'left-whight-big-arrow');
         left: 10px;
@@ -134,12 +135,25 @@ main{
 
     .cart-block{
       margin-right: -2%;
+      h1{font-size: 24px;}
+      .total{
+        font-size: 12px;
+        span{vertical-align: middle;}
+        &-sum{
+          font-size: 20px;
+          margin-left: 10px;
+          &:after{
+            content: 'rub.';
+            margin-left: 10px;
+          }
+        }
+      }
       .cart-item{
         width: 48%;
         display: inline-block;
         margin-right: 2%;
         margin-bottom: 2%;
-        border: 2px solid #BCBCBC;
+        border: 1px solid #BCBCBC;
         .wrap{
           padding: 22px;
           .desc{
@@ -165,6 +179,91 @@ main{
           }
         }
 
+      }
+      .personal-data{
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(9);
+        @include make-lg-column(9);
+        padding: 40px;
+
+        button{
+          vertical-align: middle;
+        }
+      }
+      .after-buying-helper{
+        font-size: 12px;
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        padding-top: 3%;
+      }
+    }
+
+    .comment-block{
+      @include make-xs-column(12);
+      @include make-sm-column(12);
+      @include make-md-column(10);
+      @include make-lg-column(10);
+      padding: 0;
+      .comments-form{
+        position: relative;
+        @media (min-width: $screen-sm-min) {
+          &:before {
+            content: '';
+            @include sprite($spritesheet, 'write-comment-img');
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            display: block;
+          }
+        }
+        .your-message{
+          margin-top: 30px;
+          @include make-xs-column(12);
+          @include make-sm-column(8);
+          @include make-md-column(8);
+          @include make-lg-column(8);
+          padding: 0;
+          textarea{
+            width: 100%;
+            height: 70px;
+            resize: none;
+            padding: 10px;
+          }
+        }
+        .red-button{
+          clear: both;
+          @media (min-width: $screen-sm-min){
+            position: relative;
+            z-index: 2;
+            margin-top: -50px;
+            margin-right: 8%;
+          }
+        }
+      }
+
+      .user-comments{
+        .comment{
+          font-size: 12px;
+          div{
+            span{vertical-align: middle;}
+            .rating{
+              display: inline-block;
+              vertical-align: middle;
+              margin: 0 40px;
+            }
+            .date{color: #999999;}
+            .user-name{font-family: 'robotobold';}
+          }
+          .user-text{
+            margin-top: 10px;
+            background: #f2f2f2;
+            padding: 10px;
+          }
+        }
       }
     }
   }

@@ -9,6 +9,7 @@ html
     script src='./../js/static_plugins/jquery-1.11.3.min.js'
     script src='./../js/static_plugins/swiper.js'
     script src='./../js/static_plugins/swiper.jquery.js'
+    script src='./../js/static_plugins/jquery.mask.js'
     script src='./../js/common.js'
 
   body.clearfix
@@ -144,6 +145,70 @@ html
                     span.caret.right
                     input.hidden value='1'
                     button.glyphicon.glyphicon-trash
+            div.total
+              span Итого:
+              span.total-sum 7500
+
+            div.mt-20.clearfix
+              form.personal-data.default-grey-form
+                div.surnameField.required
+                  label for='enter-surname' Фамилия
+                  input#enter-surname type='text' placeholder='Федосеев'
+                div.nameField.required
+                  label for='enter-name' Имя
+                  input#enter-name type='text' placeholder='Александр'
+                div.phoneField.required
+                  label for='enter-phone' Контактный телефон
+                  input#enter-phone type='text' placeholder='+7 (952) 993-20-45'
+                button.red-button Оформить заказ
+              div.after-buying-helper
+                | После оформления заказа наши менеджеры свяжутся с вами, чтобы уточнить время готовности заказа
+
+          h3.text-uppercase comment-block
+          div.comment-block
+            h1 Отзывы
+            div.mt-20
+              form.default-grey-form.comments-form.clearfix
+                div.your-name
+                  label for='name' Как вас зовут
+                  input#name type='text'
+                div.your-mail
+                  label for='mail' Ваш e-mail
+                  input#mail type='e-mail'
+                div.five-stars
+                  label for='rating' Оценка
+                  ul.rating
+                    - for i in ['1', '2', '3', '4', '5']
+                      li.star
+                  input.hidden#rating-value value='1'
+                div.your-message
+                  label for='mail' Сообщение
+                  textarea#mail type='text'
+                button.red-button.pull-right Опубликовать
+
+            div.mt-20
+              ul.user-comments
+                - for i in ['1', '2', '3', '4', '5']
+                  li.comment
+                    div.mt-20
+                      span.date 10-03-2016
+                      ul.rating.static
+                        - for i in ['5', '4', '3', '2', '1']
+                          - if i == '4'
+                            li.star.active
+                          - else
+                            li.star
+                      span.user-name Александр Федосеев
+                    p.user-text
+                      | Студия Slava Rosca занимается эксклюзивной флористикой. Создание невероятных решений украшения свежими цветами свадеб,
+                        корпоративных праздников, юбилеев и других торжеств. В интернет магазине Slava Rosca доставка эксклюзивных букетов цветов в
+                        Москве и по Подмосковью происходит в короткие сроки. Все цветочные корзины, букеты, композиции - это эксклюзивная авторская
+                        флористика и составляются только из свежих цветов высшего качества из Европы, Азии и Южной Америки.
+              div.paginator.mt-20
+                span Страница
+                ul
+                  - for i in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+                    li #{i}
 
 
       footer
