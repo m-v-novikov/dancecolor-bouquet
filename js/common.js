@@ -6,11 +6,26 @@ $(document).ready(function(){
         prevButton: '.banners-block .swiper-prev'
     });
 
-
     $('.add-to-card').on('click', function(e){
         e.preventDefault();
         console.log(e.currentTarget);
-    })
+    });
+    $('#myModal').modal('hide');
+
+    if($('#map').length){
+        ymaps.ready(mapInit);
+        function mapInit(){
+            var map = new ymaps.Map("map", {
+                center: [54.78443890751319,32.047982201215426],
+                zoom: 17,
+                controls: ["zoomControl", "fullscreenControl"]
+            });
+
+            var myPlacemark = new ymaps.Placemark([54.78443890751319,32.047982201215426], { balloonContent: 'Букет<br/> г. Смоленск, Ул. Пржевальского д.2' });
+
+            map.geoObjects.add(myPlacemark);
+        }
+    }
 
     $('.phoneField input').mask("+7 (999) 999-99-99");
 });

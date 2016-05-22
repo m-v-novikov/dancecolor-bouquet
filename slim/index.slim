@@ -6,10 +6,12 @@ html
       |Букет
     link rel='stylesheet' href='./../css/main.css'
     link rel='stylesheet' href='./../css/swiper.css'
+    script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"
     script src='./../js/static_plugins/jquery-1.11.3.min.js'
     script src='./../js/static_plugins/swiper.js'
     script src='./../js/static_plugins/swiper.jquery.js'
     script src='./../js/static_plugins/jquery.mask.js'
+    script src='./../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js'
     script src='./../js/common.js'
 
   body.clearfix
@@ -21,9 +23,20 @@ html
             span.db  г. Смоленск, Ул. Пржевальского д.2
             span.db.phone-number + 7 (4812) 38-87-42
           div.pull-left.col-md-3.col-lg-3
-            a.map-button href='#'
+            button class='map-button' type="button" data-toggle="modal" data-target="#myModal"
               span.glyphicon.glyphicon-map-marker
               span Контакты на карте
+          div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            div class="modal-dialog" role="document"
+              div class="modal-content"
+                div class="modal-header"
+                  button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    span aria-hidden="true"
+                  button type="button" class="glyphicon glyphicon-remove-circle pull-right" data-dismiss="modal"
+                  h4 class="modal-title" id="myModalLabel" г. Смоленск, Ул. Пржевальского д.2
+
+                div class="modal-body"
+                  div id="map"
           div.pull-right.clearfix.col-md-3.col-lg-3
             a.db.pull-right.cart-button href='#'
               span.cart-icon
@@ -32,6 +45,7 @@ html
             - for i in ['Букеты из живых цветов', 'Корзины из живых цветов', 'Композиции из живых цветов', 'Композиции из горшечных цветов', 'Вазы и кашпо', 'Композиции из искусственных', 'Игрушки и аксессуары', 'Предметы интерьера', 'Свадебная флористика', 'Траурная флористика', 'Школа флористики', 'К 8 марта'] do
               li.menu-item
                 a href='#' #{i}
+
 
       main.clearfix
         div.banners-block.swiper-container
