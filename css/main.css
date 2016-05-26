@@ -7392,13 +7392,13 @@ button.close {
 }
 .social.vk {
   display: inline-block;
-  background: url("../files/images/sprites.png") -280px -192px no-repeat;
+  background: url("../files/images/sprites.png") -280px -162px no-repeat;
   width: 32px;
   height: 32px;
 }
 .social.instagram {
   display: inline-block;
-  background: url("../files/images/sprites.png") -246px -192px no-repeat;
+  background: url("../files/images/sprites.png") -246px -162px no-repeat;
   width: 32px;
   height: 32px;
 }
@@ -7495,14 +7495,14 @@ button.close {
 .rating:not(.static) > li:before {
   content: '';
   display: inline-block;
-  background: url("../files/images/sprites.png") -270px -162px no-repeat;
+  background: url("../files/images/sprites.png") -314px -162px no-repeat;
   width: 24px;
   height: 24px;
 }
 .rating:not(.static) > li:hover:after, .rating:not(.static) > li:hover ~ li:after, .rating:not(.static) > li.active:after, .rating:not(.static) > li.active ~ li:after {
   content: "";
   display: inline-block;
-  background: url("../files/images/sprites.png") -296px -162px no-repeat;
+  background: url("../files/images/sprites.png") -340px -162px no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -7522,14 +7522,14 @@ button.close {
 .rating.static > li:before {
   content: '';
   display: inline-block;
-  background: url("../files/images/sprites.png") -270px -162px no-repeat;
+  background: url("../files/images/sprites.png") -314px -162px no-repeat;
   width: 24px;
   height: 24px;
 }
 .rating.static > li.active:after, .rating.static > li.active ~ li:after {
   content: "";
   display: inline-block;
-  background: url("../files/images/sprites.png") -296px -162px no-repeat;
+  background: url("../files/images/sprites.png") -340px -162px no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -7611,6 +7611,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+  color: #000;
 }
 
 body {
@@ -7627,6 +7628,9 @@ h1 {
 .max-width-wrap {
   max-width: 1170px;
   margin: 0 auto;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -7636,9 +7640,12 @@ header {
 }
 header .logotype {
   display: inline-block;
-  background: url("../files/images/sprites.png") 0px 0px no-repeat;
-  width: 268px;
-  height: 190px;
+  background: url("../files/images/sprites.png") -201px 0px no-repeat;
+  width: 200px;
+  height: 142px;
+}
+header .right-bar {
+  padding: 0;
 }
 header .contacts span {
   color: #999999;
@@ -7663,7 +7670,7 @@ header .cart-button {
 }
 header .cart-button .cart-icon {
   display: inline-block;
-  background: url("../files/images/sprites.png") -212px -192px no-repeat;
+  background: url("../files/images/sprites.png") -212px -162px no-repeat;
   width: 32px;
   height: 32px;
   vertical-align: middle;
@@ -7709,20 +7716,56 @@ main .banners-block .swiper-button.swiper-button-disabled {
 }
 main .banners-block .swiper-button.swiper-prev {
   display: inline-block;
-  background: url("../files/images/sprites.png") 0px -192px no-repeat;
+  background: url("../files/images/sprites.png") 0px -162px no-repeat;
   width: 104px;
   height: 104px;
   left: 10px;
 }
 main .banners-block .swiper-button.swiper-next {
   display: inline-block;
-  background: url("../files/images/sprites.png") -106px -192px no-repeat;
+  background: url("../files/images/sprites.png") -106px -162px no-repeat;
   width: 104px;
   height: 104px;
   right: 10px;
 }
 main .left-side {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-left: 20px;
+}
+@media (min-width: 768px) {
+  main .left-side {
+    float: left;
+    width: 20.83333%;
+  }
+}
+@media (min-width: 992px) {
+  main .left-side {
+    float: left;
+    width: 20.83333%;
+  }
+}
+@media (min-width: 1200px) {
+  main .left-side {
+    float: left;
+    width: 20.83333%;
+  }
 }
 main .left-side h3 {
   color: #BF252D;
@@ -7736,10 +7779,46 @@ main .left-side .filter-links li {
   margin-bottom: 10px;
 }
 main .product-list {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-family: 'robotoregular';
   font-style: normal;
   font-size: 13px;
   color: #333333;
+}
+@media (min-width: 768px) {
+  main .product-list {
+    float: left;
+    width: 79.16667%;
+  }
+}
+@media (min-width: 992px) {
+  main .product-list {
+    float: left;
+    width: 79.16667%;
+  }
+}
+@media (min-width: 1200px) {
+  main .product-list {
+    float: left;
+    width: 79.16667%;
+  }
 }
 main .product-list .product-item {
   position: relative;
@@ -7786,11 +7865,11 @@ main .product-list .product-item a img {
 main .product-list .product-item a p {
   margin-top: 10px;
 }
-main .product-list .product-item a p span {
-  vertical-align: middle;
+main .product-list .product-item a form span {
+  padding: 5px 0;
 }
-main .product-list .product-item a p .cart-button {
-  padding: 10px 5px;
+main .product-list .product-item a form .cart-button {
+  padding: 5px;
   width: 50%;
 }
 main .fragments {
@@ -7888,9 +7967,23 @@ main .fragments .product-card .other-image {
 }
 main .fragments .product-card .other-image li a {
   margin-bottom: 10px;
+  position: relative;
 }
-main .fragments .product-card .other-image li a:hover {
+main .fragments .product-card .other-image li a img {
+  position: relative;
+  z-index: 2;
+}
+main .fragments .product-card .other-image li a .pseudo-for-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+main .fragments .product-card .other-image li a:hover .pseudo-for-hover {
   border: 5px solid #ffcc33;
+  z-index: 3;
 }
 main .fragments .product-card .description {
   position: relative;
@@ -7932,6 +8025,10 @@ main .fragments .product-card .description {
 }
 main .fragments .product-card .description p {
   margin: 30px 0;
+  font-size: 13px;
+}
+main .fragments .product-card .description h1 {
+  margin-top: 0;
 }
 main .fragments .product-card .description .buying-block .price {
   font-size: 18px;
@@ -8133,7 +8230,7 @@ main .fragments .comment-block .comments-form {
   main .fragments .comment-block .comments-form:before {
     content: '';
     display: inline-block;
-    background: url("../files/images/sprites.png") -270px 0px no-repeat;
+    background: url("../files/images/sprites.png") 0px 0px no-repeat;
     width: 199px;
     height: 160px;
     position: absolute;
@@ -8245,6 +8342,9 @@ footer .bottom-links li {
   display: inline-block;
   padding: 15px 0;
   margin-right: 15px;
+}
+footer .bottom-links li a {
+  font-size: 12px;
 }
 footer .social {
   margin-left: 15px;

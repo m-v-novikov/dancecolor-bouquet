@@ -27,5 +27,11 @@ $(document).ready(function(){
         }
     }
 
+    $('.other-image li a').on('click', function(e){
+        e.preventDefault();
+        var big_img_url = $('img', this).attr('src');
+        $('.main-image img').attr('src', big_img_url);
+    });
+
     $('.phoneField input').mask("+7 (999) 999-99-99");
 });

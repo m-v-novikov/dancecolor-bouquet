@@ -56,7 +56,7 @@ html
           div.swiper-prev.swiper-button
           div.swiper-next.swiper-button
 
-        div.left-side.pull-left.col-md-2.col-lg-2
+        div.left-side
           h3 Каталог
           ul.filter-links
             - for i in ['Букеты из живых цветов', 'Корзины из живых цветов', 'Композиции из живых цветов', 'Композиции из горшечных цветов', 'Вазы и кашпо', 'Композиции из искусственных', 'Игрушки и аксессуары', 'Предметы интерьера', 'Свадебная флористика', 'Траурная флористика'] do
@@ -87,7 +87,7 @@ html
               li.menu-item
                 a href='#' #{i}
 
-        ul.product-list.pull-right.col-md-10.col-lg-10
+        ul.product-list.mt-20.pull-right
           - for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 5, 6, 7, 8, 9, 7, 8, 9, 10]
             li.product-item id='#{i}'
               a.db href='#'
@@ -120,6 +120,7 @@ html
                 li
                   a.db href='#'
                     img.img-responsive src='./../files/images/temporary/#{i}.png'
+                    div.pseudo-for-hover
             div.description
               h1
                 | Букет «Сердце Лилу»
