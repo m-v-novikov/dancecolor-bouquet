@@ -128,10 +128,11 @@ html
                 p
                   span.price
                     | 2 500
-                  span.caret.left
-                  label.quantity 1
-                  span.caret.right
-                  input.hidden value='1'
+                  span.wrap data-attr="counter"
+                    button.caret.left data-attr='0'
+                    label.quantity data-quantity="1" 1
+                    button.caret.right data-attr='1'
+                    input.hidden value='1'
                 button.red-button Заказать
               p.texts
                 | Сердце каждой женщины испытывает трепет при виде роз. А если они собраны как букет в виде сердца, то эмоции усиливаются! На
@@ -155,10 +156,11 @@ html
                     p #{i}
                     p.price 2500
                   form
-                    span.caret.left
-                    label.quantity 1
-                    span.caret.right
-                    input.hidden value='1'
+                    span.wrap data-attr="counter"
+                      button.caret.left data-attr='0'
+                      label.quantity data-quantity="1" 1
+                      button.caret.right data-attr='1'
+                      input.hidden value='1'
                     button.glyphicon.glyphicon-trash
             div.total
               span Итого:

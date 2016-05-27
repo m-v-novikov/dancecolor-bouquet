@@ -33,5 +33,39 @@ $(document).ready(function(){
         $('.main-image img').attr('src', big_img_url);
     });
 
+
+    function counterCtrl (target){
+
+        var maxValue = 10,
+            currentButton = $(target),
+            currentOperator = $(target).attr('data-attr'),
+            labelQuantity = $(target).closest('.wrap').find('.quantity'),
+            currentValue = $(target).closest('.wrap').find('.quantity').attr('data-quantity'),
+            num = 1;
+
+        if($(target).hasClass('unactive')){
+            return false;
+        }
+
+        if($(target).attr('data-attr') != 0 && currentValue < maxValue ) {
+            num = parseInt(currentValue, 10) + 1;
+            labelQuantity.attr('data-quantity', num);
+            labelQuantity.text(num);
+        }else if(currentValue > 1 && currentValue < maxValue){
+            num = parseInt(currentValue, 10) - 1;
+            labelQuantity.attr('data-quantity', num);
+            labelQuantity.text(num);
+        }else if(currentValue == maxValue && currentOperator == 0){
+            num = parseInt(currentValue, 10) - 1;
+            labelQuantity.attr('data-quantity', num);
+            labelQuantity.text(num);
+        }
+    }
+    $("[data-attr='counter'] .caret").on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        counterCtrl(this);
+    });
+
     $('.phoneField input').mask("+7 (999) 999-99-99");
 });
