@@ -4,12 +4,12 @@ html
     meta charset='utf-8'
     title
       |Букет
+    meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
     link rel='stylesheet' href='./../css/main.css'
     link rel='stylesheet' href='./../css/swiper.css'
     script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"
     script src='./../js/static_plugins/jquery-1.11.3.min.js'
     script src='./../js/static_plugins/swiper.js'
-    script src='./../js/static_plugins/swiper.jquery.js'
     script src='./../js/static_plugins/jquery.mask.js'
     script src='./../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js'
     script src='./../js/common.js'
@@ -17,7 +17,8 @@ html
   body.clearfix
     div.max-width-wrap
       header.clearfix
-        div.logotype
+        a.logotype href='#'
+          img src='./../files/images/common/main-logotype.png'
         div.right-bar.col-md-9.col-lg-9.pull-right.clearfix
           div.contacts.pull-left.col-md-4.col-lg-4
             span.db  г. Смоленск, Ул. Пржевальского д.2
@@ -44,7 +45,10 @@ html
           ul.main-menu
             - for i in ['Букеты из живых цветов', 'Корзины из живых цветов', 'Композиции из живых цветов', 'Композиции из горшечных цветов', 'Вазы и кашпо', 'Композиции из искусственных', 'Игрушки и аксессуары', 'Предметы интерьера', 'Свадебная флористика', 'Траурная флористика', 'Школа флористики', 'К 8 марта'] do
               li.menu-item
-                a href='#' #{i}
+                - if i == 'Букеты из живых цветов'
+                  a.active href='#' #{i}
+                - else
+                  a href='#' #{i}
 
 
       main.clearfix
@@ -61,7 +65,10 @@ html
           ul.filter-links
             - for i in ['Букеты из живых цветов', 'Корзины из живых цветов', 'Композиции из живых цветов', 'Композиции из горшечных цветов', 'Вазы и кашпо', 'Композиции из искусственных', 'Игрушки и аксессуары', 'Предметы интерьера', 'Свадебная флористика', 'Траурная флористика'] do
               li.menu-item
-                a href='#' #{i}
+                - if i == 'Букеты из живых цветов'
+                  a.active href='#' #{i}
+                - else
+                  a href='#' #{i}
 
           h3 Форма
           ul.filter-links
@@ -90,9 +97,10 @@ html
         ul.product-list.mt-20.pull-right
           - for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 5, 6, 7, 8, 9, 7, 8, 9, 10]
             li.product-item id='#{i}'
-              a.db href='#'
-                img.img-responsive src='./../files/images/temporary/temporary.jpg'
-                p.product-item_title
+              div
+                a.db href='#'
+                  img.img-responsive src='./../files/images/temporary/temporary.jpg'
+                a.db.product-item_title href='#'
                   | Весенний Дуэт живая композиция
                 form.clearfix
                   span.price.pull-left
@@ -101,13 +109,12 @@ html
                     | В корзину
 
 
-        ul.clearfix
-          li
+        div.clearfix
 
 
         div.fragments
           h3.text-uppercase breadcrumb
-          ul.breadcrumb
+          ul.breadcrumb.clearfix
             - for i in ['Главная', 'Корзины из живых цветов']
               li
                 a href='#' #{i}
@@ -194,10 +201,11 @@ html
                   input#mail type='e-mail'
                 div.five-stars
                   label for='rating' Оценка
-                  ul.rating
-                    - for i in ['1', '2', '3', '4', '5']
+                  div.rating
+                    - for i in ['5', '4', '3', '2', '1']
                       li.star
-                  input.hidden#rating-value value='1'
+                        input type="radio" class="rating-input rating-#{i}" name="rating" value="#{i}"
+
                 div.your-message
                   label for='mail' Сообщение
                   textarea#mail type='text'

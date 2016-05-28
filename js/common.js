@@ -29,8 +29,10 @@ $(document).ready(function(){
 
     $('.other-image li a').on('click', function(e){
         e.preventDefault();
+        $('.other-image li a').removeClass('active');
         var big_img_url = $('img', this).attr('src');
         $('.main-image img').attr('src', big_img_url);
+        $(this).addClass('active');
     });
 
 
@@ -65,6 +67,11 @@ $(document).ready(function(){
         e.preventDefault();
         e.stopPropagation();
         counterCtrl(this);
+    });
+
+    $('.rating:not(.static) .rating-input').on('click', function(){
+        $(this).closest('.rating').find('li').removeClass('active');
+        $(this).parent().addClass('active');
     });
 
     $('.phoneField input').mask("+7 (999) 999-99-99");

@@ -31,10 +31,10 @@ main{
       font-weight: bold;
     }
     .filter-links{
+      margin-left: -5px;
       li{
         font-size: 13px;
         color: #333333;
-        margin-bottom: 10px;
       }
     }
   }
@@ -56,7 +56,7 @@ main{
       padding: 0.5%;
       a{
         img{
-          margin-bottom: 10px;
+          padding-bottom: 10px;
         }
         p{
           margin-top: 10px;
@@ -116,7 +116,7 @@ main{
               height: 100%;
               z-index: 1;
             }
-            &:hover{
+            &:hover, &.active{
               .pseudo-for-hover{
                 border: 5px solid #ffcc33;
                 z-index: 3;

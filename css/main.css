@@ -7392,13 +7392,13 @@ button.close {
 }
 .social.vk {
   display: inline-block;
-  background: url("../files/images/sprites.png") -280px -162px no-repeat;
+  background: url("../files/images/sprites.png") -269px -106px no-repeat;
   width: 32px;
   height: 32px;
 }
 .social.instagram {
   display: inline-block;
-  background: url("../files/images/sprites.png") -246px -162px no-repeat;
+  background: url("../files/images/sprites.png") -235px -106px no-repeat;
   width: 32px;
   height: 32px;
 }
@@ -7495,14 +7495,14 @@ button.close {
 .rating:not(.static) > li:before {
   content: '';
   display: inline-block;
-  background: url("../files/images/sprites.png") -314px -162px no-repeat;
+  background: url("../files/images/sprites.png") -106px -162px no-repeat;
   width: 24px;
   height: 24px;
 }
 .rating:not(.static) > li:hover:after, .rating:not(.static) > li:hover ~ li:after, .rating:not(.static) > li.active:after, .rating:not(.static) > li.active ~ li:after {
   content: "";
   display: inline-block;
-  background: url("../files/images/sprites.png") -340px -162px no-repeat;
+  background: url("../files/images/sprites.png") -132px -162px no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -7514,6 +7514,17 @@ button.close {
   unicode-bidi: bidi-override;
   direction: rtl;
 }
+.rating input[type="radio"] {
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
 .rating.static > li {
   display: inline-block;
   cursor: pointer;
@@ -7522,14 +7533,14 @@ button.close {
 .rating.static > li:before {
   content: '';
   display: inline-block;
-  background: url("../files/images/sprites.png") -314px -162px no-repeat;
+  background: url("../files/images/sprites.png") -106px -162px no-repeat;
   width: 24px;
   height: 24px;
 }
 .rating.static > li.active:after, .rating.static > li.active ~ li:after {
   content: "";
   display: inline-block;
-  background: url("../files/images/sprites.png") -340px -162px no-repeat;
+  background: url("../files/images/sprites.png") -132px -162px no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -7559,6 +7570,15 @@ button.close {
 .paginator ul li:hover, .paginator ul li.active {
   background: #BF252D;
   color: #ffffff;
+}
+
+.menu-item a {
+  padding: 5px;
+  display: block;
+}
+.menu-item a:hover, .menu-item a.active {
+  background: #ffcc33;
+  text-decoration: none;
 }
 
 @font-face {
@@ -7639,10 +7659,7 @@ header {
   margin-top: 20px;
 }
 header .logotype {
-  display: inline-block;
-  background: url("../files/images/sprites.png") -201px 0px no-repeat;
-  width: 200px;
-  height: 142px;
+  float: left;
 }
 header .right-bar {
   padding: 0;
@@ -7670,7 +7687,7 @@ header .cart-button {
 }
 header .cart-button .cart-icon {
   display: inline-block;
-  background: url("../files/images/sprites.png") -212px -162px no-repeat;
+  background: url("../files/images/sprites.png") -201px -106px no-repeat;
   width: 32px;
   height: 32px;
   vertical-align: middle;
@@ -7686,11 +7703,6 @@ header .main-menu .menu-item {
 }
 header .main-menu .menu-item a {
   display: inline-block;
-  padding: 5px;
-}
-header .main-menu .menu-item a:hover {
-  background: #ffcc33;
-  text-decoration: none;
 }
 header #myModal .glyphicon {
   font-size: 24px;
@@ -7716,14 +7728,14 @@ main .banners-block .swiper-button.swiper-button-disabled {
 }
 main .banners-block .swiper-button.swiper-prev {
   display: inline-block;
-  background: url("../files/images/sprites.png") 0px -162px no-repeat;
+  background: url("../files/images/sprites.png") -201px 0px no-repeat;
   width: 104px;
   height: 104px;
   left: 10px;
 }
 main .banners-block .swiper-button.swiper-next {
   display: inline-block;
-  background: url("../files/images/sprites.png") -106px -162px no-repeat;
+  background: url("../files/images/sprites.png") 0px -162px no-repeat;
   width: 104px;
   height: 104px;
   right: 10px;
@@ -7773,10 +7785,12 @@ main .left-side h3 {
   font-family: 'robotoregular';
   font-weight: bold;
 }
+main .left-side .filter-links {
+  margin-left: -5px;
+}
 main .left-side .filter-links li {
   font-size: 13px;
   color: #333333;
-  margin-bottom: 10px;
 }
 main .product-list {
   position: relative;
@@ -7860,7 +7874,7 @@ main .product-list .product-item {
   }
 }
 main .product-list .product-item a img {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 main .product-list .product-item a p {
   margin-top: 10px;
@@ -7981,7 +7995,7 @@ main .fragments .product-card .other-image li a .pseudo-for-hover {
   height: 100%;
   z-index: 1;
 }
-main .fragments .product-card .other-image li a:hover .pseudo-for-hover {
+main .fragments .product-card .other-image li a:hover .pseudo-for-hover, main .fragments .product-card .other-image li a.active .pseudo-for-hover {
   border: 5px solid #ffcc33;
   z-index: 3;
 }
